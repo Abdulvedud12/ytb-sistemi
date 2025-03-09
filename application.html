@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTB Application Process</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="application.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="app-logo-on-light.svg" alt="YTB Logo">
+                <span class="logo-text">YTB Application Process</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <button class="lang-switch">EN | TR</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="application-main">
+        <div class="progress-bar">
+            <div class="progress-step active" data-step="1">
+                <i class="fas fa-user"></i>
+                <span>Personal Information</span>
+            </div>
+            <div class="progress-step" data-step="2">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Educational Background</span>
+            </div>
+            <div class="progress-step" data-step="3">
+                <i class="fas fa-file-alt"></i>
+                <span>Documents</span>
+            </div>
+            <div class="progress-step" data-step="4">
+                <i class="fas fa-check-circle"></i>
+                <span>Review & Submit</span>
+            </div>
+        </div>
+
+        <form id="application-form" class="multi-step-form">
+            <!-- Step 1: Personal Information -->
+            <div class="form-step active" data-step="1">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate">Date of Birth*</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationality*</label>
+                    <input type="text" id="nationality" name="nationality" required>
+                </div>
+                <div class="form-group">
+                    <label for="passportNumber">Passport Number*</label>
+                    <input type="text" id="passportNumber" name="passportNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="next-btn">Next Step</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Educational Background -->
+            <div class="form-step" data-step="2">
+                <h2>Educational Background</h2>
+                <div class="form-group">
+                    <label for="educationLevel">Highest Education Level*</label>
+                    <select id="educationLevel" name="educationLevel" required>
+                        <option value="">Select Education Level</option>
+                        <option value="highSchool">High School</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="university">Institution Name*</label>
+                    <input type="text" id="university" name="university" required>
+                </div>
+                <div class="form-group">
+                    <label for="graduationYear">Graduation Year*</label>
+                    <input type="number" id="graduationYear" name="graduationYear" min="1950" max="2024" required>
+                </div>
+                <div class="form-group">
+                    <label for="gpa">GPA*</label>
+                    <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="4" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next Step</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Documents -->
+            <div class="form-step" data-step="3">
+                <h2>Required Documents</h2>
+                <div class="form-group">
+                    <label for="passportCopy">Passport Copy*</label>
+                    <input type="file" id="passportCopy" name="passportCopy" accept=".pdf,.jpg,.png" required>
+                    <small>Upload a clear copy of your passport's bio page (PDF, JPG, PNG)</small>
+                </div>
+                <div class="form-group">
+                    <label for="diploma">Diploma/Degree Certificate*</label>
+                    <input type="file" id="diploma" name="diploma" accept=".pdf" required>
+                    <small>Upload your latest diploma (PDF only)</small>
+                </div>
+                <div class="form-group">
+                    <label for="transcripts">Academic Transcripts*</label>
+                    <input type="file" id="transcripts" name="transcripts" accept=".pdf" required>
+                    <small>Upload your academic transcripts (PDF only)</small>
+                </div>
+                <div class="form-group">
+                    <label for="letterOfIntent">Letter of Intent*</label>
+                    <input type="file" id="letterOfIntent" name="letterOfIntent" accept=".pdf,.doc,.docx" required>
+                    <small>Upload your letter of intent (PDF, DOC, DOCX)</small>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next Step</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Review & Submit -->
+            <div class="form-step" data-step="4">
+                <h2>Review Your Application</h2>
+                <div id="application-summary">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I confirm that all information provided is accurate and complete
+                    </label>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Need Help?</h4>
+                <p>Email: support@ytb.gov.tr</p>
+                <p>Phone: +90 xxx xxx xxxx</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Presidency for Turks Abroad and Related Communities. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="application.js"></script>
+</body>
+</html> 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTB Online Application System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="app-logo-on-light.svg" alt="YTB Logo">
+                
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#applications">Applications</a>
+                <a href="#scholarships">Scholarships</a>
+                <a href="#contact">Contact</a>
+                <button class="lang-switch">EN | TR</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to YTB Online Application Portal</h1>
+            <p>Presidency for Turks Abroad and Related Communities</p>
+            <div class="cta-buttons">
+                <a href="application.html" class="primary-btn">Start Application</a>
+                <button class="secondary-btn">Track Application</button>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Our Programs</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Türkiye Scholarships</h3>
+                    <p>Full-funded scholarship programs for international students</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Cultural Exchange</h3>
+                    <p>Programs for cultural exchange and integration</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Support Programs</h3>
+                    <p>Various support programs for Turkish citizens abroad</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Academic Programs</h3>
+                    <p>Research and academic cooperation opportunities</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="application-form">
+            <h2>Application Form</h2>
+            <form id="ytb-application">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" required>
+                </div>
+                <div class="form-group">
+                    <label for="program">Program Type</label>
+                    <select id="program" name="program" required>
+                        <option value="">Select a program</option>
+                        <option value="scholarship">Türkiye Scholarships</option>
+                        <option value="cultural">Cultural Exchange Program</option>
+                        <option value="support">Support Program</option>
+                        <option value="academic">Academic Program</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="documents">Upload Documents</label>
+                    <input type="file" id="documents" name="documents" multiple>
+                </div>
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@ytb.gov.tr</p>
+                <p>Phone: +90 xxx xxx xxxx</p>
+                <p>Address: Ankara, Turkey</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#about">About YTB</a>
+                <a href="#faq">FAQ</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Presidency for Turks Abroad and Related Communities. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
